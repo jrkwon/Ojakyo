@@ -1,0 +1,195 @@
+ [400L[350T[400B
+
+
+
+
+
+
+
+                                µ¡¸bŠa 2.0 Ûr
+
+
+
+
+
+
+                                ‹a ÑÅ¬w ÁAĞñ !!!
+
+
+
+
+
+         ¶Ÿ¡¯¡” ÂA‰¡· ­QËi•·´aŸ¡ ĞeËi´aŸ¡µA¬á ¹A‰·Ğa“e Ğb‰Á‰ÅŸ¡ ¸aaËi
+
+
+ 0. Ñe¸ »¡aÃ¡‰A ¸a­AĞe ¶wŒa»¡ ”q‰¡ ·¶“e ¸aa· Ëi·i Ğb¬—Äa—aµA
+    ‹¡º…Ğaµa ¸÷Ÿ¡Ğe”a.
+
+
+ 1. ¸aaŸi ·³Â‰bĞa“e ¦¦…·i ­¥»©Ğe”a
+
+    ¸aa· Á·ˆ•®µÁ Ñe¸ ¸aa¤åÑ¡Ÿi Îa¯¡Ğa“e ‹¡“w·e Ñe¸·
+    À‰¡“e ¬a¯©¬w ¦‰ˆa“wĞa”a.
+    ˜aœa¬á, ”a·q‰Á ˆ{·¡ ‹a ÁA‰Ÿi ¤a…”a.
+    
+    (1) Ñe¸¸aa/Á·¸aa · ÑwÈÂ‰b
+    
+    Á·¸aa· ˆ•®“e ¸aaÌa·©· ÑA”á¦¦…·i Àq¹¡Ğ¬á ŠĞi ® ·¶”a.
+    ˆb ¸aaÌa·©· ÑA”á“e ”a·q‰Á ˆ{·e Š¹¡¡ –A´á ·¶”a.
+    
+    typedef struct fhdr {
+      RPTR first_record;
+      RPTR next_record;
+    } FHEADER;
+    
+    µa‹¡µA¬á first_record“e ˆa¸w ÂA‹eµA »¡¶¡»¥ ¸aa· ¸aa¤åÑ¡ˆa 
+    —i´áˆe”a.  e´¢, »¡¶¡»¥ ¸aaˆa ´ô”a¡e 0·¡”a.
+    
+    Ùh ¸aa¤åÑ¡“e 1¦Èá ¯¡¸bĞa¡a, ¸aa· ¢‰Ÿ¡¸â·¥ ¸á¸w®…¬á·¡”a.
+    
+    ‹aŸ¡‰¡, next_recordµA“e »¡¶¡»¥ ¸aaˆa ´ô´ö”a¡e, ”a·qµA Âˆa–A“e
+    ¸aaˆa ¸á¸w–I ¸aa¤åÑ¡·¡”a. (º—ˆeµA »¡¶¡»¥ ¸aaˆa ·¶”a¡e ‹a ¦¦…
+    ¦Èá À¶¡ aˆe”a) ¸aaˆa Ğaa•¡ ´ô”a¡e ¢‰¥ ‹a ˆt·e 1·¡”a. 
+    5ˆ· ¸aaˆa ¸á¸w–A´ö”å(º—ˆeµA »¡¶¡»¥ ¸aaˆa ·¶—e ´ô—e) ¬wÈœa¡e, 
+    ‹a ˆt·e 6·¡”a. 
+    
+    ¸a, ‹aœá“¡Œa Ğ”s·e ˆe”eĞa”a.
+    
+    Ñe¸ Á· ¸aa® = Ìa·©ÑA”á->next_record - »¡¶¡»¥ ¸aa· ˆ•®
+    
+    ”e, µa‹¡¬á »¡¶¡»¥ ¸aa· ˆ•®“e Ñe¸ ‹a ˆt·i aÈa“e ¥e®ˆa ´ô·a
+    £a¡ ¥e®Ÿi ¬é¸÷Ğ´¡ Ğe”a.
+    
+    (2) ¸aa·³Â‰b ¦¦… ¸ ¬é‰
+    
+    Ñe¸·(93.07) ¸aa·³Â‰b ÁA‰¡“e ¸aa¤åÑ¡Â‰b·¡ ¬a¯©¬w ¦‰ˆa“wĞa”a.
+    ¸aa·³b Ğq®µA á¢  g·e ‹¡“w·i º‰¡, µaœá ¸aa‰ÅŸ¡ Ğq®—i·¡ 
+    À‰¸â·a¡ ‹a Ğa“e ·©·¡ ¦…ŸAˆa –A»¡ ´g´v”å ¢…¹A¸ñ·¡ ·¶´ö”a.
+    
+    ‹aœ¬á, ‰ÁˆqĞa‰A ˆb Ğq®· ‹¡“w·i ¸÷Ÿ¡, ÁA‰ÑÁŸi AĞe”a.
+    
+    (1-1) ¬¡¶… ¸aa ·³b
+    
+    ‹¡¹¥· ·³bĞq®“e ‹a ¸aÁA¸â·a¡ ¬b¹A ‹¡“w‰Á ¸aaˆe ·¡•· ‹¡“w(´|, –á,
+    ˆa¸w ´|, ˆa¸w –á...)—w·¡ ·¶´ö”a. ·¡¡ ·¥Ğ, ¸aa¤åÑ¡Ÿi  ‰aº“e
+    ¤w¤ó·¡ ´aº ´ás‰A –A´á ¤áŸ¡‰¡ ™¡Ğe, Ñe¸ ®¸÷ ¬wÈ·¥»¡ ´a“¡¡e ¬¡¶…
+    ¸aa· ·³b¬wÈ·¥»¡¹¡Àa ¦…ˆeĞa‹¡ ´ás‰A –A´á ¤áv”a.
+
+    ‹aœ¬á, ·¡¹A“e µÅ¸åÓ¡ ·¡ ·³bĞq®Ÿi ·³b‹¡“wµA e ¹AĞe·i –‘·a¡°á
+    ÁA‰Ÿi ­A¶‹¡¡ Ğe”a.
+    ˜aœa¬á ‹¡¹¥· ¸aa¬b¹A ‹¡“w‰Á ¸aaˆe ·¡•· ‹¡“w—w·i ´ô´…”a.
+    
+    (1-2) ¸aa Àx´a ¥¡‹¡
+    
+    ‹¡¹¥µA“e ¸aaŸi Àx·e Ò ‰¨¤a¡ Íe»³¬wÈ¡ —i´áˆv“e•A, ·¡ µb¯¡
+    ¤aœq»¢Ğe ¤w¤ó·¡ ´a“¥ ˆõ ˆ{”a.
+    
+    ˜aœa¬á ¸aa Àx´a¥¡‹¡µA¬á“e Ğ”w¸aa(¹¡ˆåµA  x“e ¸aaˆa µaœáˆ ·¶”a¡e
+    ‹a ¸aa—i e.)Ÿi µiœq e ˆa“wĞa•¡¢ Ğe”a.
+    
+    ·¡˜ Àx·e ¸aaŸi ÏaŸ¥Èá ™¡“e ÑÁ·© Â‰bĞi ˆõ·¥ˆaŸi ¢ˆ‰¡ ¸â”wĞa‰A ”Àá.
+    
+    (1-3) ¸aa ®¸÷ Ğa‹¡
+    
+    ‹¡¹¥µA“e ¸aa ®¸÷¬wÈ¡ —i´áˆe Ò, ”aŸe ¸aa—iŒa»¡ ¡¡– ®¸÷Ği ® 
+    ·¶´ö”a.
+    
+    ·¡Ÿi Ğ”w ¸aa e ®¸÷Ği ® ·¶•¡¢ ‰¡Ã¥”a.
+    
+    (1-4) ¸aa »¡¶‹¡
+    
+    Íe»³‹¡“wµA ¸aa»¡¶‹¡ˆa ·¶´á¬á ¥i•¡· ¡A“A¡ ¬é¸÷–A»¡ ´g´v´ö”a.
+    
+    ·¡Ÿi ¥i•¡· ¡A“A¡ ¬é¸÷Ğe”a.
+    
+    (1-5) Ò´á ¥¡‹¡
+    
+    Ñe¸· ‰©‰b·e ‹a”¡ ·A»¡Ğa–A, Ï©¶aĞe ¸aa Íe»³ ˜ ”aŸe ¸aa¡ 
+    ·¡•·Ğa»¡ ¡µĞa•¡¢ Ğe”a.
+    ™¡Ğe ¹Á, ¶ ™¡“e  … ¶á,  … ´aœ¡ ·¡•·Ği ˜ aµ¡“e µ¡ŸA ¡A¯¡»¡Ÿi
+    ‹a· '§³'­¡Ÿ¡¡ ¤a…”a.
+    
+    ÑÁ¡eµA aµ¥ ¡¢¢ÑwÈ· ¸aaŸi ·¥­áĞi ® ·¶•¡¢ Ğe”a.
+    
+    Ùh ¸aaÂ‰bµA¬á ³a·¡“e ¹¡ˆå º‹¡ ¤w¤ó·¡ ¸i –A¡e, Ò´á¥¡‹¡µA•¡ Âˆa
+       Ğa“e ˆõ·¡ ¹½·i ˆõ ˆ{”a.
+    
+    (1-5) ¸aa Â‰b
+    
+    Ñe¸· ‰©‰b·i ·A»¡Ğa–A, Â‰b´·¯¢·i ¬a¶w¸aµA‰A ¸å¸â·a¡  {‹¡»¡
+     i‰¡, ”a´·Ğe ÑwÈ· Â‰b´·¯¢·i £¡Ÿ¡  e—i´á –…”a.
+    ™¡Ğe Â‰b¤wĞ·•¡ ÏaŸ¥ÈáµÁ Ìa·© ·¡¶AµA 'ÑÁ¡e'•¡ ÂˆaĞe”a.
+    Ìa·© Â‰b ˜ ·±·¡ ¦›·¡”å ·¡Ÿq·i ¬a¶w¸aµA‰A ·³bĞa•¡¢ Ğe”a.
+
+    ‹aŸ¡‰¡, ™¡ Ğaa!
+    ¸aa Â‰b Ği ˜ ¹¡ˆå·i »¡¸÷Ği ® ·¶•¡¢ Ğe”a.    
+    
+    ¹¡ˆå »¡¸÷Ğa“e ¤w¤ó·i ¸÷Ÿ¡Ğ ¥¡¡e ”a·q‰Á ˆ{”a.
+    
+     å¸á ·¥­á ¹¡ˆå·i »¡¸÷¤h·i ¤w¤ó·e ¬a¶w¸a· ·³b·i »¢¸ó ¤hˆáa
+    (·¡ ¤w¤ó·e ˆa¸w aº—µA ¬åÈ‚–A•¡¢ Ğe”a) ´a“¡¡e, ¡yˆa»¡ ´·¯¢·i
+     e—i´á –…”a.
+    
+    ¹¡ˆå·i ¸á¸wĞi Š¹¡ÁA“e ”a·q‰Á ˆ{”a.    
+
+    typedef struct output_cond_t {
+      int ele_no;           /* ¹¡ˆå·i »¡¸÷Ği ¸aa¶a­¡¤åÑ¡ */
+      char key[MAXKEYLEN];  /* ¹¡ˆå·a¡ ¸å”i–I Ç¡ */
+      int offset;           /* ¸á¸w–E ¸aaµA¬á ˆåášé ¤a·¡Ëa */
+    } OUTPUT_COND;
+    
+    µŸi —i´á, ¸á¸w–E ¸aa º—µA¬á Ğb¤å·¡ 88·¡‰¡ ¬—·©·¡ ´·b 9¶©·¥
+    ¬aœq·i Â‰bĞa‰¡ ¯¼·a¡e, ”a·q‰Á ˆ{·¡ Ğa¡e –E”a.
+    
+    OUTPUT_COND out_cond[MAXFIELD];
+    
+    out_cond[0].ele_no = ST_NO;     /* Ğb¤å */
+    out_cond[0].key[]  = "88"
+    out_cond[0].offset = 0;
+    
+    out_cond[1].ele_no = ST_BIRTH;  /* ¬—·© */
+  > out_cond[1].key[]  = "09"
+  > out_cond[0].offset = 2;
+    
+    out_cond[2].ele_no = ST_SOLAR;  /*  ´·,·qb */
+    out_cond[2].key[]  = "1"
+    out_cond[2].offset = 0;
+    
+    out_cond[3].ele_no = -1;        /* ¹¡ˆå { Îa¯¢ */
+    
+
+    ”aŸe ‰w¶“e ¥i ¢…¹Aˆa ´ô»¡ e, ¬—·© ˆñ¬‚· ‰w¶,
+    ˆñ¬‚Ğ´¡ Ği ”i·e ¯©¹A ¸aa ("680726")µA¬á 2¤å¼(0¦Èá ¯¡¸bĞ¬á)
+    ¦Èá ˆñ¬‚Ğaµa´¡ Ğe”a. ·¡Ÿi ¶áĞ offset·¡œe ¥e®Ÿi –´ö”a.
+    
+    ¹¡ˆå·i ˆñ¬aĞa“e ¦¦…·e ”a·q‰Á ˆ{”a. 
+    ¯©¹A ¸aaŸi Â‰bĞa“e ¦¦…µA¬á, ¸aaŸi Â‰bĞa‹¡ »¢¸åµA ”a·q‰Á
+    ˆ{·e ¤w¯¢·a¡ ¹¡ˆå·i ˆñ¬aĞe”a.
+        
+
+    /* 
+     *  dlist“e Ñe¸ ”a‰¡ ·¶“e ¸aa¶a­¡ ¡¢¢·¡”a 
+     *  buf“e Ìa·©µA¬á ·ª´á µ¥ ¸aaŸi ¸á¸wĞ ‘½·e ¤áÌá·¡”a.  
+     */
+    cond_flag = 1;
+    for(cnt = 0; out_cond[cnt].ele_no != -1; cnt++) {
+      res = strncmp(buf+epos(dlist, out_cond[cnt].ele_no)+out_cond[cnt].offset,
+                    key, strlen(key));
+      if(res) {         /* ¹¡ˆåµA  x»¡ ´g·a£a¡ */
+        cond_flag = 0;  /* Â‰b ‹q»¡ Ïiœ‹a ¬é¸÷Ğa‰¡ */
+        break;          /* ¤e¥¢¢… ÈiÂ‰ */
+      }
+    }                  
+    if(cond_flag)
+      /* ·¥­áĞe”a..... */
+      
+
+   
+ 2. ¸aa —¡BÉ¡Ÿ¡Ÿi ˜a¡  e—i´á¬á ¸aaÌa·© ¥¡‰Å·i •³“e”a.
+
+    OJARKYO -+-- DATA       (¸aa Ìa·©)
+             |
+             +-- INDEX      (¸aa ·¥•B¯a)
+             |
+             +-- FILE       (Â‰b˜ »¡¸÷–E Ìa·©·¡ ¸á¸w–I ‰µ)
+             

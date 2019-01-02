@@ -1,0 +1,27 @@
+ojark.c(handbms.h)
+
+hanojark.c(hanojark.h, handbms.h)
+hanprint.c(hanprint.h, handbms.h)
+hanbtree.c(handbms.h)
+handbase.c(handbms.h)
+handfile.c(handbms.h)
+hanquery.c(handbms.h)
+hanscrn.c(handbms.h)
+handutil.c(handbms.h)
+
+hanzip.c(hanzip.h)
+hanpop.c(hanpop.h)
+hancalen.c(hancalen.h)
+hancalc.c(hancalc.h)
+handdd.c(zip-code.h, zip-idx.h)
+hanpcx.c(hanpcx.h)
+hanmenu.c(hanmenu.h)
+hanwindw.c(hanwindw.h)
+hanerro2.c(hanerro2.h)
+
+hanoutl.lib
+haninl.lib
+hanlink.lib
+handev.lib
+hanfont.lib
+
